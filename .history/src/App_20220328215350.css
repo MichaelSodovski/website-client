@@ -1,0 +1,33 @@
+.App {
+    box-sizing: border-box;
+    display: grid;
+    grid-template-rows: 50px 1fr;
+    grid-template-columns: repeat(12, 1fr);
+    background-color: white;
+}
+
+.App, div > * {
+    border: 0.01px black solid;
+    border-bottom: none;
+    position: center;
+}
+
+.App-header {
+    grid-column: span 12;
+    background-image: radial-gradient(#becac9 10%, #909b93 30%, #303532);
+    box-shadow: 3px 3px 3px grey;
+    height: 50px;
+}
+
+.App-main {
+    grid-column: span 6;
+    height: 800px;
+    border: 0.01px black solid;
+    background-image: radial-gradient(#becac9 10%, #909b93 30%, #303532);
+}
+
+.App-left-side_menu {
+    grid-column: span 2;
+    background-color: #F7FFF7;
+    height: 100%;
+}
