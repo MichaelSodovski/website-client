@@ -10,7 +10,7 @@ export default function App() {
             <header className="App-header"></header>
             <div className="layout-flexbox-container">
                 <aside className="App-right-side_menu">
-
+                    
                 </aside>
                 <main className="App-main">
                     <Switch>
@@ -20,7 +20,7 @@ export default function App() {
                     </Switch>
                 </main>
                 <aside className="App-left-side_menu">
-                    <Menu></Menu>
+
                 </aside>
             </div>
         </div>

@@ -9,8 +9,8 @@ export default function App() {
         <div className="App">
             <header className="App-header"></header>
             <div className="layout-flexbox-container">
-                <aside className="App-right-side_menu">
-
+                <aside className="App-left-side_menu">
+                    <Menu></Menu>
                 </aside>
                 <main className="App-main">
                     <Switch>
@@ -19,8 +19,8 @@ export default function App() {
                         </Route>
                     </Switch>
                 </main>
-                <aside className="App-left-side_menu">
-                    <Menu></Menu>
+                <aside className="App-right-side_menu">
+
                 </aside>
             </div>
         </div>

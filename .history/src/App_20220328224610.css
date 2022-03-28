@@ -27,7 +27,7 @@
 
 .App-left-side_menu {
     display: flex;
-    flex-direction: column;
+    flex-direction: ;
     background-color: #F7FFF7;
     border: 0.01px black solid;
     height: 650px;
