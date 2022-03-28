@@ -21,6 +21,10 @@ export default function App() {
                 </main>
                 <aside className="App-left-side_menu">
                     <Menu></Menu>
+                    <button> aaa </button>
+            <button> bbb </button>
+            <button> ccc </button>
+            <button> ddd </button>
                 </aside>
             </div>
         </div>
