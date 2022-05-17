@@ -1,0 +1,7 @@
+.navigationBar-form-container {
+    display: flex;
+    flex-direction: row;
+    border: 1px black solid;
+    width: 100%;
+    height
+}

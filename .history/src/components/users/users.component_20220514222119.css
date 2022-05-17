@@ -1,0 +1,18 @@
+.table-users {
+    border: 1px solid black;
+}
+
+.table-users > tr, td {
+    border: 1px solid black;
+    padding: 5px;
+    width: 100%;
+}
+
+.table-users > tr {
+    border: 1px solid black;
+    padding: 5px;
+    width: 100%;
+}
+
+
+

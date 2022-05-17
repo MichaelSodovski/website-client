@@ -1,0 +1,6 @@
+.register-form-container {
+    display: flex;
+    flex-direction: column;
+    w
+    border: 1px black solid;
+}
