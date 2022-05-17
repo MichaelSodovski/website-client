@@ -1,0 +1,8 @@
+.table-users {
+    border: 1px solid black;
+}
+
+.table-users > tr, td {
+    border: 1px solid black;
+}
+

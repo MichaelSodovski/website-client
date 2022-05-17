@@ -1,0 +1,10 @@
+.main-container {
+    background-color: aliceblue;
+}
+
+.register-form-container {
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+    border: 1px black solid;
+}

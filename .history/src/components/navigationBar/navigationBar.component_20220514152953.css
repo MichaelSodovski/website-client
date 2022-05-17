@@ -1,0 +1,25 @@
+.navBar-main-container {
+    display: flex;
+    justify-content: space-evenly;
+    border: 1px black solid;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(168, 206, 250);
+}
+
+.navigationBar-left-form-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    border: 1px black solid;
+    width: 20%;
+}
+
+.navigationBar-right-form-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    border: 1px black solid;
+    width: 20%;
+}
+

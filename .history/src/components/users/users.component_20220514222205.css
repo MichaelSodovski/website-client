@@ -1,0 +1,12 @@
+.table-users {
+    border: 1px solid black;
+    width: 100%;
+}
+
+.table-users > tr, td {
+    border: 1px solid black;
+    padding: 5px;
+}
+
+
+
