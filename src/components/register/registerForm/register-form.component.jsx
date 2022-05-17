@@ -1,9 +1,10 @@
+import React from 'react';
 import '../registerForm/register-form.component.css'
 
 export default function Form() {
 
     return (
-        <div>
+        <React.Fragment>
             <form className="register-form-container" action="/adduser" method="POST">
                 <label>First Name: </label>
                 <input type="text" name="firstName" required></input>
@@ -25,7 +26,7 @@ export default function Form() {
                 <br></br>
                 <input type="submit" value="Submit" ></input>
             </form>
-        </div>
+        </React.Fragment>
     );
 }
 

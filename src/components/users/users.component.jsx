@@ -1,7 +1,6 @@
 import React from 'react';
 import { useEffect, useState } from 'react';
 import '../users/users.component.css'
-import { format } from 'date-fns'
 
 export default function Users() {
     const [usersData, setusersData] = useState([]);
@@ -32,7 +31,7 @@ export default function Users() {
     }
 
     return (
-        <div>
+        <React.Fragment>
             <table className="table-users">
                 <thead>
                     <tr className="table-users-tr">
@@ -87,6 +86,6 @@ export default function Users() {
                     })}
                 </tbody>
             </table>
-        </div>
+        </React.Fragment>
     );
 }

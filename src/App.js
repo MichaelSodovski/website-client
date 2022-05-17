@@ -10,34 +10,36 @@ import Users from '../src/components/users/users.component'
 
 export default function App() {
     return (
-        <div className="App">
-            <header className="App-header">
-                <NavigationBar></NavigationBar>
-            </header>
-            <div className="layout-flexbox-container">
-                <aside className="App-right-side_menu">
-                    <Menu></Menu>
-                </aside>
-                <main className="App-main">
-                    <Switch>
-                        <Route path="/home">
-                            <Home></Home>
-                        </Route>
-                        <Route path="/register">
-                            <Register></Register>
-                        </Route>
-                        <Route path="/signin">
-                            <SignIn></SignIn>
-                        </Route>
-                        <Route path="/users">
-                            <Users></Users>
-                        </Route>
-                    </Switch>
-                </main>
-                <aside className="App-left-side_menu">
-                    <Menu></Menu>
-                </aside>
+        <React.Fragment>
+            <div className="App">
+                <header className="App-header">
+                    <NavigationBar></NavigationBar>
+                </header>
+                <div className="layout-flexbox-container">
+                    <aside className="App-right-side_menu">
+                        {/* some section to be filled */}
+                    </aside>
+                    <main className="App-main">
+                        <Switch>
+                            <Route path="/home">
+                                <Home></Home>
+                            </Route>
+                            <Route path="/register">
+                                <Register></Register>
+                            </Route>
+                            <Route path="/signin">
+                                <SignIn></SignIn>
+                            </Route>
+                            <Route path="/users">
+                                <Users></Users>
+                            </Route>
+                        </Switch>
+                    </main>
+                    <aside className="App-left-side_menu">
+                        <Menu></Menu>
+                    </aside>
+                </div>
             </div>
-        </div>
+        </React.Fragment>
     );
 }

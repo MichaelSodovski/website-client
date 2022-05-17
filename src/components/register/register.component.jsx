@@ -8,15 +8,17 @@ export default function Register() {
     const [isPaymentVisible, setisPaymentVisible] = useState(false);
 
     return (
-        <div className="main-container">
+        <React.Fragment>
             <div>
-                <Form></Form>
+                <div>
+                    <Form></Form>
+                </div>
+                <div>
+                    {isPaymentVisible === true &&
+                        <Payment></Payment>
+                    }
+                </div>
             </div>
-            <div>
-                {isPaymentVisible === true &&
-                    <Payment></Payment>
-                }
-            </div>
-        </div>
+        </React.Fragment>
     );
 }
