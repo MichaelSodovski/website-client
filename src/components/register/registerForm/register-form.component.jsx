@@ -1,5 +1,10 @@
 import React, { useState } from 'react';
 import '../registerForm/register-form.component.css'
+import {
+    PasswordValidationInstructions, FirstNameValidationInstructions,
+    LastNameValidationInstructions, UserNameValidationInstructions,
+    EmailValidationInstructions, DateValidationInstructions
+} from '../registerForm/register-form-utils'
 
 export default function Form() {
     const [isFirstNameValid, setisFirstNameValid] = useState();
@@ -12,7 +17,6 @@ export default function Form() {
     }
     const [isLastNameValid, setisLastNameValid] = useState();
     const [isLastNamePristine, setisLastNamePristine] = useState(false);
-
     const validityCheckHandlerLastName = () => {
         setisLastNameValid(document.getElementById("lastNameInput").validity.valid);
     }
@@ -63,6 +67,7 @@ export default function Form() {
                         type="text"
                         name="firstName"
                         required
+                        //must contain letters only
                         pattern="[a-zA-Z]+"
                         minLength={"2"}
                         maxLength={"20"}
@@ -74,7 +79,7 @@ export default function Form() {
                             <p>first name is valid</p>
                         }
                         {isFirstNamePristine && !isFirstNameValid &&
-                            <p>first name is not valid</p>
+                            <FirstNameValidationInstructions></FirstNameValidationInstructions>
                         }
                     </div>
                 </div>
@@ -96,7 +101,7 @@ export default function Form() {
                             <p style={{ backgroundColor: 'greenyellow' }}>last name is valid</p>
                         }
                         {isLastNamePristine && !isLastNameValid &&
-                            <p style={{ backgroundColor: 'red' }}>last name is not valid</p>
+                            <LastNameValidationInstructions></LastNameValidationInstructions>
                         }
                     </div>
                 </div>
@@ -107,7 +112,8 @@ export default function Form() {
                         placeholder="enter your user name"
                         type="text"
                         name="userName"
-                        required pattern="[a-zA-Z]+"
+                        //should start with an alphabet so. All other characters can be alphabets, numbers or an underscore so.
+                        required pattern="^[A-Za-z][A-Za-z0-9_]{7,29}$"
                         minLength={"6"}
                         maxLength={"20"}
                         onChange={(e) => validityCheckHandlerUsertName(e)}
@@ -118,7 +124,7 @@ export default function Form() {
                             <p style={{ backgroundColor: 'greenyellow' }}>user name is valid</p>
                         }
                         {isUserNamePristine && !isUserNameValid &&
-                            <p style={{ backgroundColor: 'red' }}>user name is not valid</p>
+                            <UserNameValidationInstructions></UserNameValidationInstructions>
                         }
                     </div>
                 </div>
@@ -130,9 +136,10 @@ export default function Form() {
                         type="password"
                         name="passWord"
                         required
-                        pattern="[a-zA-Z]+"
+                        //Minimum eight characters, at least one uppercase letter, one lowercase letter and one number:
+                        pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{8,}$"
                         autoComplete="on"
-                        minLength={"10"}
+                        minLength={"9"}
                         maxLength={"20"}
                         onChange={(e) => validityCheckHandlerPassword(e)}
                         onClick={(e) => isPasswordTouchedHandler(e)}
@@ -142,7 +149,7 @@ export default function Form() {
                             <p style={{ backgroundColor: 'greenyellow' }}>password is valid</p>
                         }
                         {isPasswordPristine && !isPasswordValid &&
-                            <p style={{ backgroundColor: 'red' }}>password is not valid</p>
+                            <PasswordValidationInstructions></PasswordValidationInstructions>
                         }
                     </div>
                 </div>
@@ -154,6 +161,7 @@ export default function Form() {
                         type="email"
                         name="email"
                         required
+                        //must be gmail or hotmail and end with .com
                         pattern=".+@gmail\.com|.+@hotmail\.com"
                         minLength={"10"}
                         maxLength={"50"}
@@ -165,7 +173,7 @@ export default function Form() {
                             <p style={{ backgroundColor: 'greenyellow' }}>email is valid</p>
                         }
                         {isEmailPristine && !isEmailValid &&
-                            <p style={{ backgroundColor: 'red' }}>email is not valid</p>
+                            <EmailValidationInstructions></EmailValidationInstructions>
                         }
                     </div>
                 </div>
@@ -188,7 +196,7 @@ export default function Form() {
                             <p style={{ backgroundColor: 'greenyellow' }}>date is valid</p>
                         }
                         {isDatePristine && !isDateValid &&
-                            <p style={{ backgroundColor: 'red' }}>date is not valid</p>
+                            <DateValidationInstructions></DateValidationInstructions>
                         }
                     </div>
                 </div>
