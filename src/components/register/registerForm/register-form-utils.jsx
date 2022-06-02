@@ -1,4 +1,6 @@
 import React from "react";
+import '../registerForm/register-form-utils.css'
+
 export function FirstNameValidationInstructions() {
     return (
         <React.Fragment>
