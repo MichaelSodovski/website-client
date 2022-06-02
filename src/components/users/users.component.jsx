@@ -27,7 +27,7 @@ export default function Users() {
     }
     // convert id of the role to the role itself
     const parseRole = (roleId) => {
-        return (roleId == '3' ? 'user' : 'admin')
+        return (roleId === '3' ? 'user' : 'admin')
     }
 
     return (
