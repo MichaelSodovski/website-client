@@ -1,0 +1,45 @@
+.register-form-container {
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+    border: 1px black solid;
+    padding: 25px;
+    background-color: whitesmoke;
+}
+
+input, select, label {
+    padding-bottom: 10px;
+}
+
+.first-name-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.last-name-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.user-name-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.password-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.email-container {
+    display: flex;
+    flex-direction: column;
+}
+.date-of-birth-container {
+    display: flex;
+    flex-direction: column;
+}
+.gender-container {
+    display: flex;
+    flex-direction: column;
+}
