@@ -12,11 +12,8 @@ export default function Form() {
     }
     const [isLastNameValid, setisLastNameValid] = useState();
     const [isLastNamePristine, setisLastNamePristine] = useState(false);
-<<<<<<< HEAD
+
     const validityCheckHandlerLastName = () => {
-=======
-    const validityCheckHandlerLasttName = () => {
->>>>>>> 0bffd86799811d92faeea1ed7fb20eca96e13924
         setisLastNameValid(document.getElementById("lastNameInput").validity.valid);
     }
     const isLastNameTouchedHandler = (e) => {
@@ -54,12 +51,6 @@ export default function Form() {
     const isDateTouchedHandler = (e) => {
         setisDatePristine(true);
     }
-<<<<<<< HEAD
-
-    console.log("Asd");
-
-=======
->>>>>>> 0bffd86799811d92faeea1ed7fb20eca96e13924
 
     return (
         <React.Fragment>
@@ -97,11 +88,7 @@ export default function Form() {
                         pattern="[a-zA-Z]+"
                         minLength={"2"}
                         maxLength={"20"}
-<<<<<<< HEAD
                         onChange={(e) => validityCheckHandlerLastName(e)}
-=======
-                        onChange={(e) => validityCheckHandlerLasttName(e)}
->>>>>>> 0bffd86799811d92faeea1ed7fb20eca96e13924
                         onClick={(e) => isLastNameTouchedHandler(e)}
                     ></input>
                     <div className={"last-name-container-validation"}>
