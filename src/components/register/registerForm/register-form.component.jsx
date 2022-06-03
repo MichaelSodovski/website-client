@@ -3,7 +3,8 @@ import '../registerForm/register-form.component.css'
 import {
     PasswordValidationInstructions, FirstNameValidationInstructions,
     LastNameValidationInstructions, UserNameValidationInstructions,
-    EmailValidationInstructions, DateValidationInstructions, FirstNameValid
+    EmailValidationInstructions, DateValidationInstructions, FirstNameValid,
+    LastNameValid, UserNameValid, EmailValid, PasswordValid, DateValid
 } from '../registerForm/register-form-utils'
 
 export default function Form() {
@@ -91,7 +92,7 @@ export default function Form() {
                     ></input>
                     <div className={"last-name-container-validation"}>
                         {isLastNamePristine && isLastNameValid &&
-                            <p style={{ backgroundColor: 'greenyellow' }}>last name is valid</p>
+                            <LastNameValid></LastNameValid>
                         }
                         {isLastNamePristine && !isLastNameValid &&
                             <LastNameValidationInstructions></LastNameValidationInstructions>
@@ -114,7 +115,7 @@ export default function Form() {
                     ></input>
                     <div className={"user-name-container-validation"}>
                         {isUserNamePristine && isUserNameValid &&
-                            <p style={{ backgroundColor: 'greenyellow' }}>user name is valid</p>
+                            <UserNameValid></UserNameValid>
                         }
                         {isUserNamePristine && !isUserNameValid &&
                             <UserNameValidationInstructions></UserNameValidationInstructions>
@@ -139,7 +140,7 @@ export default function Form() {
                     ></input>
                     <div className={"password-container-validation"}>
                         {isPasswordPristine && isPasswordValid &&
-                            <p style={{ backgroundColor: 'greenyellow' }}>password is valid</p>
+                            <PasswordValid></PasswordValid>
                         }
                         {isPasswordPristine && !isPasswordValid &&
                             <PasswordValidationInstructions></PasswordValidationInstructions>
@@ -163,7 +164,7 @@ export default function Form() {
                     ></input>
                     <div className={"email-container-validation"}>
                         {isEmailPristine && isEmailValid &&
-                            <p style={{ backgroundColor: 'greenyellow' }}>email is valid</p>
+                            <EmailValid></EmailValid>
                         }
                         {isEmailPristine && !isEmailValid &&
                             <EmailValidationInstructions></EmailValidationInstructions>
@@ -186,7 +187,7 @@ export default function Form() {
                     ></input>
                     <div className={"date-container-validation"}>
                         {isDatePristine && isDateValid &&
-                            <p style={{ backgroundColor: 'greenyellow' }}>date is valid</p>
+                            <DateValid></DateValid>
                         }
                         {isDatePristine && !isDateValid &&
                             <DateValidationInstructions></DateValidationInstructions>

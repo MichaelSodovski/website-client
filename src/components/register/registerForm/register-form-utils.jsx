@@ -3,12 +3,56 @@ import '../registerForm/register-form-utils.css'
 import { SiCachet } from "react-icons/si";
 import { RiCloseCircleFill } from "react-icons/ri";
 
-
 export function FirstNameValid() {
     return (
         <React.Fragment>
             <div className={"valid-container"}>
-                <p><SiCachet></SiCachet> first name is valid</p>
+                <p><SiCachet></SiCachet> First name is valid</p>
+            </div>
+        </React.Fragment>
+    )
+}
+export function LastNameValid() {
+    return (
+        <React.Fragment>
+            <div className={"valid-container"}>
+                <p><SiCachet></SiCachet> Last name is valid</p>
+            </div>
+        </React.Fragment>
+    )
+}
+export function UserNameValid() {
+    return (
+        <React.Fragment>
+            <div className={"valid-container"}>
+                <p><SiCachet></SiCachet> User name is valid</p>
+            </div>
+        </React.Fragment>
+    )
+}
+export function PasswordValid() {
+    return (
+        <React.Fragment>
+            <div className={"valid-container"}>
+                <p><SiCachet></SiCachet> Password is valid</p>
+            </div>
+        </React.Fragment>
+    )
+}
+export function EmailValid() {
+    return (
+        <React.Fragment>
+            <div className={"valid-container"}>
+                <p><SiCachet></SiCachet> Email is valid</p>
+            </div>
+        </React.Fragment>
+    )
+}
+export function DateValid() {
+    return (
+        <React.Fragment>
+            <div className={"valid-container"}>
+                <p><SiCachet></SiCachet> Date is valid</p>
             </div>
         </React.Fragment>
     )
@@ -18,11 +62,11 @@ export function FirstNameValidationInstructions() {
     return (
         <React.Fragment>
             <div className={"validation-instructions-container"}>
-                <p><RiCloseCircleFill></RiCloseCircleFill> first name is not valid:</p>
-                <ul>
-                    <li>Minimum 2 characters.</li>
-                    <li>Maximum 20 characters.</li>
-                    <li>must contain letters only.</li>
+                <p className={"p-element"}><RiCloseCircleFill></RiCloseCircleFill> first name is not valid:</p>
+                <ul className={"ul-container"}>
+                    <li className={"il-element"}>Minimum 2 characters.</li>
+                    <li className={"il-element"}>Maximum 20 characters.</li>
+                    <li className={"il-element"}>must contain letters only.</li>
                 </ul>
             </div>
         </React.Fragment>
