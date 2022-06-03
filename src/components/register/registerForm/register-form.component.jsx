@@ -61,7 +61,6 @@ export default function Form() {
         <React.Fragment>
             <form className="register-form-container" action="/adduser" method="POST">
                 <div className={"first-name-container"}>
-                    <label className={"first-name-label"}>First Name: </label>
                     <input className={"first-name-input"} id="firstNameInput" placeholder="enter your first name" type="text" name="firstName"
                         required
                         //must contain letters only
@@ -81,7 +80,6 @@ export default function Form() {
                     </div>
                 </div>
                 <div className={"last-name-container"}>
-                    <label>Last Name: </label>
                     <input id="lastNameInput" placeholder="enter your last name" type="text" name="lastName"
                         required
                         pattern="[a-zA-Z]+"
@@ -100,7 +98,6 @@ export default function Form() {
                     </div>
                 </div>
                 <div className={"user-name-container"}>
-                    <label>User Name: </label>
                     <input
                         id="userNameInput"
                         placeholder="enter your user name"
@@ -123,7 +120,6 @@ export default function Form() {
                     </div>
                 </div>
                 <div className={"password-container"}>
-                    <label>Password: </label>
                     <input
                         id="passwordInput"
                         placeholder="enter your password"
@@ -148,7 +144,6 @@ export default function Form() {
                     </div>
                 </div>
                 <div className={"email-container"}>
-                    <label>Email: </label>
                     <input
                         id="emailInput"
                         placeholder="enter your email"
@@ -172,7 +167,6 @@ export default function Form() {
                     </div>
                 </div>
                 <div className={"date-of-birth-container"}>
-                    <label>Date Of Birth: </label>
                     <input
                         id="date-of-birth-input"
                         placeholder="enter your date of birth"
@@ -195,7 +189,6 @@ export default function Form() {
                     </div>
                 </div>
                 <div className={"gender-container"}>
-                    <label>Gender: </label>
                     <select name="gender">
                         <option value="m">Male</option>
                         <option value="f">Female</option>

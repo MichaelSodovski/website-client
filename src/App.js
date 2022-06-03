@@ -2,11 +2,12 @@ import './App.css';
 import React from "react";
 import { Route, Switch } from 'react-router-dom';
 import Home from '../src/components/home/home.component'
-import Menu from '../src/components/menu/menu.component';
+// import Menu from '../src/components/menu/menu.component';
 import Register from '../src/components/register/register.component';
 import NavigationBar from '../src/components/navigationBar/navigationBar.component';
-import SignIn from '../src/components/signIn/signIn.component'
-import Users from '../src/components/users/users.component'
+import SignIn from '../src/components/signIn/signIn.component';
+import Users from '../src/components/users/users.component';
+import PasswordRecovery from '../src/components/password-recovery/passwordRecovery.component';
 
 export default function App() {
     return (
@@ -33,10 +34,13 @@ export default function App() {
                             <Route path="/users">
                                 <Users></Users>
                             </Route>
+                            <Route path="/passwordRecovery">
+                                <PasswordRecovery></PasswordRecovery>
+                            </Route>
                         </Switch>
                     </main>
                     <aside className="App-left-side_menu">
-                        <Menu></Menu>
+                        {/* some section to be filled */}
                     </aside>
                 </div>
             </div>

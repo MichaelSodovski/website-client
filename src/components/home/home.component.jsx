@@ -14,7 +14,7 @@ export default function Home() {
     return (
         <React.Fragment>
             <div>
-                <p>{arrayMethods()}</p>
+                <p>home </p>
             </div>
         </React.Fragment>
     );
