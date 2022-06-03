@@ -6,14 +6,21 @@
     padding: 25px;
     background-color: whitesmoke;
 }
-
 input, select, label {
-    padding-bottom: 10px;
+    padding-bottom: 5px;
 }
 
 .first-name-container {
     display: flex;
     flex-direction: column;
+    border: 1px black solid;
+    padding: 5px;
+}
+.first-name-label {
+    font-size:smaller;
+}
+.first-name-input {
+    font-size:smaller;
 }
 
 .last-name-container {

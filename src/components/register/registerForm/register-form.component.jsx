@@ -3,7 +3,7 @@ import '../registerForm/register-form.component.css'
 import {
     PasswordValidationInstructions, FirstNameValidationInstructions,
     LastNameValidationInstructions, UserNameValidationInstructions,
-    EmailValidationInstructions, DateValidationInstructions
+    EmailValidationInstructions, DateValidationInstructions, FirstNameValid
 } from '../registerForm/register-form-utils'
 
 export default function Form() {
@@ -60,12 +60,8 @@ export default function Form() {
         <React.Fragment>
             <form className="register-form-container" action="/adduser" method="POST">
                 <div className={"first-name-container"}>
-                    <label>First Name: </label>
-                    <input
-                        id="firstNameInput"
-                        placeholder="enter your first name"
-                        type="text"
-                        name="firstName"
+                    <label className={"first-name-label"}>First Name: </label>
+                    <input className={"first-name-input"} id="firstNameInput" placeholder="enter your first name" type="text" name="firstName"
                         required
                         //must contain letters only
                         pattern="[a-zA-Z]+"
@@ -76,7 +72,7 @@ export default function Form() {
                     ></input>
                     <div className={"first-name-container-validation"}>
                         {isFirstNamePristine && isFirstNameValid &&
-                            <p>first name is valid</p>
+                            <FirstNameValid></FirstNameValid>
                         }
                         {isFirstNamePristine && !isFirstNameValid &&
                             <FirstNameValidationInstructions></FirstNameValidationInstructions>
@@ -85,10 +81,7 @@ export default function Form() {
                 </div>
                 <div className={"last-name-container"}>
                     <label>Last Name: </label>
-                    <input
-                        id="lastNameInput"
-                        placeholder="enter your last name"
-                        type="text" name="lastName"
+                    <input id="lastNameInput" placeholder="enter your last name" type="text" name="lastName"
                         required
                         pattern="[a-zA-Z]+"
                         minLength={"2"}

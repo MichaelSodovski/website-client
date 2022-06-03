@@ -1,0 +1,43 @@
+.valid-container {
+    display: flex;
+    flex-direction: row;
+    border: 1px black solid;
+    border-radius: 3px;
+    background-color: rgb(186 255 187 / 86%);
+    font-size:smaller;
+    height: 100%;
+    padding: 5px;
+}
+.valid-container > p {
+    margin-left: 5px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+}
+
+
+
+
+.validation-instructions-container {
+    display: flex;
+    flex-direction: column;
+    border: 1px black solid;
+    border-radius: 3px;
+    background-color: rgb(255 219 219);
+    font-size:smaller;
+    height: 85px;
+}
+.validation-instructions-container > p {
+    border: 1px black solid;
+    border-radius: 3px;
+    background-color: rgb(255 120 120);
+    padding: 5px;
+    margin-left: 5px;
+    margin-top: 5px;
+}
+.validation-instructions-container > ul {
+    position: relative;
+    bottom: 9px;
+    margin-left: 0px;
+    margin-top: -5px;
+}
+
