@@ -1,4 +1,4 @@
-.email-form-container {
+.codeVerification-form-container {
     margin: 25% auto;
     border: 1px solid black;
     width: 50%;
@@ -9,6 +9,6 @@
     flex: 1 auto;
 }
 
-.email-form-container > button {
+.codeVerification-form-container > button {
     margin-top: 20px;
 }

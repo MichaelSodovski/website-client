@@ -4,6 +4,7 @@ import '../users/users.component.css'
 
 export default function Users() {
     const [usersData, setusersData] = useState([]);
+    const [expanded, setExpanded] = useState(false);
     // fetch users from DB
     useEffect(() => {
         let usersArr = [];
@@ -30,11 +31,19 @@ export default function Users() {
         return (roleId === '3' ? 'user' : 'admin')
     }
 
+    const togglExpandedHandler = (e) => {
+        (!expanded) ? setExpanded(true) : setExpanded(false)
+        console.log(expanded);
+    };
+
     return (
         <React.Fragment>
             <table className="table-users">
                 <thead>
                     <tr className="table-users-tr">
+                        <th>
+
+                        </th>
                         <th>
                             id
                         </th>
@@ -70,7 +79,9 @@ export default function Users() {
                 <tbody>
                     {usersData.map(user => {
                         return (
-                            <tr key={user.id}>
+
+                            <tr key={user.id} onClick={(e) => togglExpandedHandler(e)}>
+                                <td><input type="checkbox"></input></td>
                                 <td>{user.id}</td>
                                 <td>{user.userName}</td>
                                 <td>{user.passWord}</td>

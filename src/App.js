@@ -8,6 +8,9 @@ import NavigationBar from '../src/components/navigationBar/navigationBar.compone
 import SignIn from '../src/components/signIn/signIn.component';
 import Users from '../src/components/users/users.component';
 import PasswordRecovery from '../src/components/password-recovery/passwordRecovery.component';
+import Admin from '../src/components/admin/admin.component'
+import EmailVerification from '../src/components/password-recovery/emailVerification/emailVerification.component'
+import UpdatePassword from '../src/components/password-recovery/passwordUpdate/passwordUpdate.component'
 
 export default function App() {
     return (
@@ -36,6 +39,15 @@ export default function App() {
                             </Route>
                             <Route path="/passwordRecovery">
                                 <PasswordRecovery></PasswordRecovery>
+                            </Route>
+                            <Route path="/admin">
+                                <Admin></Admin>
+                            </Route>
+                            <Route path="/emailVerification">
+                                <EmailVerification></EmailVerification>
+                            </Route>
+                            <Route path="/passwordUpdate">
+                                <UpdatePassword></UpdatePassword>
                             </Route>
                         </Switch>
                     </main>
