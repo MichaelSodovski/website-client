@@ -13,8 +13,19 @@ export default function UpdatePassword() {
     const validityCheckHandlerPassword = (e) => {
         setisPasswordValid(document.getElementById("passwordInput").validity.valid);
     }
+
     const isPasswordTouchedHandler = (e) => {
         setisPasswordPristine(true);
+    }
+
+    const [isPasswordVerificationValid, setisPasswordVerificationValid] = useState();
+    const [isPasswordVerificationPristine, setisPasswordVerificationPristine] = useState(false);
+    const validityCheckHandlerPasswordVerification = (e) => {
+        setisPasswordVerificationValid(document.getElementById("passwordVerificationInput").validity.valid);
+    }
+
+    const isPasswordVerificationTouchedHandler = (e) => {
+        setisPasswordVerificationPristine(true);
     }
 
     const inputRefHandler = (e) => {
@@ -66,6 +77,7 @@ export default function UpdatePassword() {
                         }
                     </div>
                     <input
+                        id="passwordVerificationInput"
                         type="password"
                         name="newPasswordVerify"
                         placeholder='repeat the new password'
@@ -75,14 +87,14 @@ export default function UpdatePassword() {
                         minLength={"9"}
                         maxLength={"20"}
                         onChange={e => inputRefVerificationHandler(e)}
-                        onInput={(e) => validityCheckHandlerPassword(e)}
-                        onClick={(e) => isPasswordTouchedHandler(e)}
+                        onInput={(e) => validityCheckHandlerPasswordVerification(e)}
+                        onClick={(e) => isPasswordVerificationTouchedHandler(e)}
                     ></input>
                     <div className={"password-container-validation"}>
-                        {isPasswordPristine && isPasswordValid &&
+                        {isPasswordVerificationPristine && isPasswordVerificationValid &&
                             <PasswordValid></PasswordValid>
                         }
-                        {isPasswordPristine && !isPasswordValid &&
+                        {isPasswordVerificationPristine && !isPasswordVerificationValid &&
                             <PasswordValidationInstructions></PasswordValidationInstructions>
                         }
                     </div>
