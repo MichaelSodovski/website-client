@@ -1,7 +1,6 @@
 import React from 'react';
 import '../signIn/signIn.component.css'
 import { Link } from "react-router-dom";
-import { useState } from 'react';
 
 export default function SignIn() {
 

@@ -1,7 +1,42 @@
 import React from 'react';
 import '../passwordUpdate/passwordUpdate.component.css'
+import { useState, useEffect } from "react";
+import { PasswordValidationInstructions, PasswordValid } from '../../register/registerForm/register-form-utils';
 
 export default function UpdatePassword() {
+    const [password, setPassword] = useState("a");
+    const [passwordVerification, setPasswordVerification] = useState("b");
+    const [verified, setVerified] = useState(true);
+
+    const [isPasswordValid, setisPasswordValid] = useState();
+    const [isPasswordPristine, setisPasswordPristine] = useState(false);
+    const validityCheckHandlerPassword = (e) => {
+        setisPasswordValid(document.getElementById("passwordInput").validity.valid);
+    }
+    const isPasswordTouchedHandler = (e) => {
+        setisPasswordPristine(true);
+    }
+
+    const inputRefHandler = (e) => {
+        setPassword(e.target.value);
+    }
+
+    const inputRefVerificationHandler = (e) => {
+        setPasswordVerification(e.target.value);
+    }
+
+    function verificationHandler() {
+        if (password === passwordVerification &&
+            /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{8,}$/.test(password) &&
+            /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{8,}$/.test(passwordVerification)) {
+            setVerified(false);
+        }
+        else setVerified(true);
+    };
+
+    useEffect(() => {
+        verificationHandler();
+    }, [password, passwordVerification]);
 
     return (
         <React.Fragment>
@@ -18,7 +53,18 @@ export default function UpdatePassword() {
                         autoComplete="on"
                         minLength={"9"}
                         maxLength={"20"}
+                        onChange={e => inputRefHandler(e)}
+                        onInput={(e) => validityCheckHandlerPassword(e)}
+                        onClick={(e) => isPasswordTouchedHandler(e)}
                     ></input>
+                    <div className={"password-container-validation"}>
+                        {isPasswordPristine && isPasswordValid &&
+                            <PasswordValid></PasswordValid>
+                        }
+                        {isPasswordPristine && !isPasswordValid &&
+                            <PasswordValidationInstructions></PasswordValidationInstructions>
+                        }
+                    </div>
                     <input
                         type="password"
                         name="newPasswordVerify"
@@ -28,8 +74,19 @@ export default function UpdatePassword() {
                         autoComplete="on"
                         minLength={"9"}
                         maxLength={"20"}
+                        onChange={e => inputRefVerificationHandler(e)}
+                        onInput={(e) => validityCheckHandlerPassword(e)}
+                        onClick={(e) => isPasswordTouchedHandler(e)}
                     ></input>
-                    <button className="form-submit-btn" type="submit" value="Submit">Submit</button>
+                    <div className={"password-container-validation"}>
+                        {isPasswordPristine && isPasswordValid &&
+                            <PasswordValid></PasswordValid>
+                        }
+                        {isPasswordPristine && !isPasswordValid &&
+                            <PasswordValidationInstructions></PasswordValidationInstructions>
+                        }
+                    </div>
+                    <button disabled={verified} className="form-submit-btn" type="submit" value="Submit">Submit</button>
                 </div>
             </form>
         </React.Fragment>
