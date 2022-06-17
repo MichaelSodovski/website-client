@@ -21,7 +21,6 @@
     border-radius: 3px;
     background-color: rgb(255 219 219);
     font-size:smaller;
-    height: 85px;
 }
 .validation-instructions-container > p {
     border: 1px black solid;

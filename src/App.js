@@ -12,6 +12,8 @@ import Admin from '../src/components/admin/admin.component'
 import EmailVerification from '../src/components/password-recovery/emailVerification/emailVerification.component'
 import UpdatePassword from '../src/components/password-recovery/passwordUpdate/passwordUpdate.component'
 import UsernameRecovery from '../src/components/username-recovery/username-recovery.component'
+import EmailSent from '../src/components/notificationPages/emailSent/emailSent';
+import EmailVerificationSent from '../src/components/notificationPages/EmailVerificationSent/EmailVerificationSent'
 
 export default function App() {
     return (
@@ -52,6 +54,12 @@ export default function App() {
                             </Route>
                             <Route path="/userNameRecovery">
                                 <UsernameRecovery></UsernameRecovery>
+                            </Route>
+                            <Route path="/emailSent">
+                                <EmailSent></EmailSent>
+                            </Route>
+                            <Route path="/emailVerificationSent">
+                                <EmailVerificationSent></EmailVerificationSent>
                             </Route>
                         </Switch>
                     </main>

@@ -7,7 +7,9 @@ export default function EmailVerification() {
         <React.Fragment>
             <form action="/verifyCode" method="POST">
                 <div className="codeVerification-form-container">
+                    <h1>Email verification</h1>
                     <input
+                    className="email-verification-input-recovery"
                         type="text"
                         name="verificationCode"
                         placeholder='enter 5 digit code sent to youre email'

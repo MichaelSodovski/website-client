@@ -60,6 +60,7 @@ export default function Form() {
     return (
         <React.Fragment>
             <form className="register-form-container" action="/adduser" method="POST">
+            <h1 className="register-header">Register</h1>
                 <div className={"first-name-container"}>
                     <input className={"first-name-input"} id="firstNameInput" placeholder="enter your first name" type="text" name="firstName"
                         required

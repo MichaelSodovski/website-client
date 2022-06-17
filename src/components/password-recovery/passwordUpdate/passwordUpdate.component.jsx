@@ -53,7 +53,9 @@ export default function UpdatePassword() {
         <React.Fragment>
             <form action="/updatePassword" method="POST">
                 <div className="updatePassword-form-container">
+                    <h1>New password</h1>
                     <input
+                    className="new-password-input"
                         id="passwordInput"
                         type="password"
                         name="newPassword"
@@ -77,6 +79,7 @@ export default function UpdatePassword() {
                         }
                     </div>
                     <input
+                    className="new-password-confirm-input"
                         id="passwordVerificationInput"
                         type="password"
                         name="newPasswordVerify"

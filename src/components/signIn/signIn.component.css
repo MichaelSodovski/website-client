@@ -37,6 +37,7 @@
 .form-submit-btn-container {
     border-radius: 10px;
     padding: 10px;
+    
 }
 
 .form-submit-btn {
@@ -51,6 +52,7 @@
     position: relative;
     transition-duration: 500ms;
     transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
+    border: 0.01px solid #000000;
 }
 
 .form-submit-btn:hover {
@@ -101,17 +103,10 @@
     background: #d0e8ff;
 }
 
-.input-user-name {
+.input-user-name, .input-password {
     height: 25px;
     border: 0px solid #d0e8ff;
     border-radius: 1px;
-    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.1);
-    -webkit-box-shadow: 0 4px 12px rgb(0 0 0 / 15%);
-}
-
-.input-password {
-    height: 25px;
-    border: 0;
     box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.1);
     -webkit-box-shadow: 0 4px 12px rgb(0 0 0 / 15%);
 }
@@ -138,4 +133,8 @@
     padding: 3px 0px 3px 3px;
     margin: 5px 1px 3px 0px;
     border: 1px solid #0073b1;
+  }
+
+  .welcome-header {
+    text-shadow: 1px 1px #353535;
   }

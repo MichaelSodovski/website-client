@@ -5,8 +5,10 @@ export default function UsernameRecovery() {
     return (
         <React.Fragment>
             <form action="/recoverUserName" method="POST">
-                <div className="email-form-container">
+                <div className="email-form-container-userName-recovery">
+                    <h1>User name recovery</h1>
                     <input
+                    className="email-input-userName-recovery"
                         type="email"
                         name="email"
                         placeholder='enter the email you used to register you account'

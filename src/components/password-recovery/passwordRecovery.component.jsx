@@ -7,7 +7,9 @@ export default function PasswordRecovery() {
         <React.Fragment>
             <form action="/recoverPassword" method="POST">
                 <div className="email-form-container">
+                    <h1 >Password recovery</h1>
                     <input
+                        className="email-input-password-recovery"
                         type="email"
                         name="email"
                         placeholder='enter the email you used to register you account'

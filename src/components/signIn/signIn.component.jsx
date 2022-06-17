@@ -8,6 +8,7 @@ export default function SignIn() {
         <React.Fragment>
             <form action="/login" method="POST">
                 <div className="signIn-form-container">
+                    <h1 className="welcome-header">Welcome</h1>
                     <div className="userName-form-container">
                         <input className="input-user-name" type="text" name="userName" placeholder='User name'
                             //should start with an alphabet so. All other characters can be alphabets, numbers or an underscore so.

@@ -8,12 +8,12 @@ export default function NavigationBar() {
     return (
         <React.Fragment>
             <div className="navBar-main-container">
-                <div className="navigationBar-right-form-container">
+                <div className="navigationBar-right-container">
                     <Link to="/home">
                         <button className="btn" >Home</button>
                     </Link>
                 </div>
-                <div className="navigationBar-left-form-container">
+                <div className="navigationBar-left-container">
                     <Link to="/register">
                         <button className="btn">Register</button>
                     </Link>
