@@ -14,8 +14,10 @@ export default function PasswordSucceessUpdated() {
 
     return (
         <React.Fragment>
+            <div className="password-updated-container">
             <h1>Password updated successfully</h1>
             <p>Now you can login with your new password.</p>
+            </div>
             {redirect &&
                 <Redirect to='/signin' />
             }

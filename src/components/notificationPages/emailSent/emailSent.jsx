@@ -14,9 +14,11 @@ export default function EmailSent() {
 
     return (
         <React.Fragment>
-            <h1>Email has been sent</h1>
+            <div className="email-sent-container">
+            <h1 className="h1-header">Email has been sent</h1>
             <p>an email with the credentials has been sent to your email.</p>
             <p>please check your mail box and follow the instructions of the email.</p>
+            </div>
             {redirect &&
                 <Redirect to='/signin' />
             }

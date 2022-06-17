@@ -56,7 +56,7 @@ export default function App() {
                             <Route path="/userNameRecovery">
                                 <UsernameRecovery></UsernameRecovery>
                             </Route>
-                            
+
                             <Route path="/emailSent">
                                 <EmailSent></EmailSent>
                             </Route>
@@ -65,10 +65,10 @@ export default function App() {
                             </Route>
                             <Route path="/passwordRecoveryEmailVerificationSent">
                                 <EmailVerificationSent></EmailVerificationSent>
-                            </Route>  
+                            </Route>
                             <Route path="/PasswordSucceessUpdated">
                                 <PasswordSucceessUpdated></PasswordSucceessUpdated>
-                            </Route>  
+                            </Route>
                         </Switch>
                     </main>
                     <aside className="App-left-side_menu">
