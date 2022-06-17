@@ -1,53 +1,73 @@
 .register-form-container {
-    margin: 5% auto;
+    margin: 15% auto;
+    border: 0;
+    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.1);
+    -webkit-box-shadow: 0 4px 12px rgb(0 0 0 / 15%);
     display: flex;
     flex-direction: column;
-    width: 30%;
-    border: 1px black solid;
-    padding: 25px;
-    background-color: whitesmoke;
-}
-input, select, label {
-    padding-bottom: 5px;
+    padding: 30px;
+    width: 352px;
+    border-radius: 8px;
+    background: #fff;
 }
 
-.first-name-container {
+.form-submit-btn {
+    background-color: #0073b1;
+    color: #fff;
+    border-radius: 28px;
+    font-size: 1.1rem;
+    font-weight: 500;
+    font-family: inherit;
+    padding: 5px;
+    position: relative;
+    transition-duration: 500ms;
+    transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
+}
+
+.form-submit-btn:hover {
+    background-color: #fff;
+    color: #0073b1;
+}
+
+.first-name-container, .last-name-container, .user-name-container, .password-container,
+.email-container, .date-of-birth-container, .gender-container {
     display: flex;
     flex-direction: column;
-    border: 1px black solid;
+    border: 2px solid #fff;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
     padding: 5px;
 }
-.first-name-label {
-    font-size:smaller;
-}
-.first-name-input {
-    font-size:smaller;
-}
 
-.last-name-container {
-    display: flex;
-    flex-direction: column;
-}
-
-.user-name-container {
-    display: flex;
-    flex-direction: column;
-}
-
-.password-container {
-    display: flex;
-    flex-direction: column;
-}
-
-.email-container {
-    display: flex;
-    flex-direction: column;
-}
-.date-of-birth-container {
-    display: flex;
-    flex-direction: column;
-}
-.gender-container {
-    display: flex;
-    flex-direction: column;
-}
+.first-name-input, .last-name-input, .user-name-input, 
+.password-input, .email-input, .date-of-birth-input,
+.gender-input, textarea {
+    transition: box-shadow 1s;
+    transition-duration: 500ms;
+    transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
+    -webkit-transition: all 0.30s ease-in-out;
+    -moz-transition: all 0.30s ease-in-out;
+    -ms-transition: all 0.30s ease-in-out;
+    -o-transition: all 0.30s ease-in-out;
+    outline: none;
+    padding: 3px 0px 3px 3px;
+    margin: 5px 1px 3px 0px;
+    border: 0px solid #d0e8ff;
+    height: 25px;
+    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.1);
+    -webkit-box-shadow: 0 4px 12px rgb(0 0 0 / 15%);
+  }
+   
+  .first-name-input:focus, .last-name-input:focus, .user-name-input:focus, 
+  .password-input:focus, .email-input:focus, 
+  .date-of-birth-input:focus, .gender-input:focus, 
+  textarea:focus {
+    transition-duration: 500ms;
+    transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
+    box-shadow: 0 0 5px #0073b1;
+    padding: 3px 0px 3px 3px;
+    margin: 5px 1px 3px 0px;
+    border: 0px solid #0073b1;
+  }

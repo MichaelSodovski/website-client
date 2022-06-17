@@ -80,7 +80,7 @@ export default function Form() {
                     </div>
                 </div>
                 <div className={"last-name-container"}>
-                    <input id="lastNameInput" placeholder="enter your last name" type="text" name="lastName"
+                    <input className={"last-name-input"} id="lastNameInput" placeholder="enter your last name" type="text" name="lastName"
                         required
                         pattern="[a-zA-Z]+"
                         minLength={"2"}
@@ -99,6 +99,7 @@ export default function Form() {
                 </div>
                 <div className={"user-name-container"}>
                     <input
+                    className={"user-name-input"}
                         id="userNameInput"
                         placeholder="enter your user name"
                         type="text"
@@ -121,6 +122,7 @@ export default function Form() {
                 </div>
                 <div className={"password-container"}>
                     <input
+                    className={"password-input"}
                         id="passwordInput"
                         placeholder="enter your password"
                         type="password"
@@ -145,6 +147,7 @@ export default function Form() {
                 </div>
                 <div className={"email-container"}>
                     <input
+                    className={"email-input"}
                         id="emailInput"
                         placeholder="enter your email"
                         type="email"
@@ -168,6 +171,7 @@ export default function Form() {
                 </div>
                 <div className={"date-of-birth-container"}>
                     <input
+                    className={"date-of-birth-input"}
                         id="date-of-birth-input"
                         placeholder="enter your date of birth"
                         type="date"
@@ -189,13 +193,13 @@ export default function Form() {
                     </div>
                 </div>
                 <div className={"gender-container"}>
-                    <select name="gender">
+                    <select className={"gender-input"} name="gender">
                         <option value="m">Male</option>
                         <option value="f">Female</option>
                     </select>
                 </div>
                 <br></br>
-                <input type="submit" value="Submit" ></input>
+                <input className="form-submit-btn" type="submit" value="Submit" ></input>
             </form>
         </React.Fragment>
     );

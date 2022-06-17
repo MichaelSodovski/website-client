@@ -1,25 +1,30 @@
 .signIn-form-container {
     margin: 25% auto;
-    border: 1px solid black;
-    background-color: rgb(230, 230, 230);
+    border: 0;
+    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.1);
+    -webkit-box-shadow: 0 4px 12px rgb(0 0 0 / 15%);
     display: flex;
     flex-direction: column;
-    padding: 25px;
-    width: 25%;
-    height: 25%;
+    padding: 30px;
+    width: 352px;
+    border-radius: 8px;
+    background: #fff;
 }
 
 .userName-form-container {
-    border: 1px solid black;
+    border: 2px solid #fff;
+    border-radius: 5px;
     display: flex;
     flex-direction: column;
     flex-grow: 1;
 }
 
 .password-form-container {
-    border: 1px solid black;
+    border: 2px solid #fff;
+    border-radius: 5px;
     display: flex;
     flex-direction: column;
+    margin-top: 10px;
 }
 
 .forgot-remember-container {
@@ -27,18 +32,30 @@
     flex-direction: row;
     justify-content: space-around;
     font-size: small;
+    margin-top: 10px;
 }
 .form-submit-btn-container {
-    border: 1px solid black;
     border-radius: 10px;
     padding: 10px;
 }
 
 .form-submit-btn {
-    border-radius: 10px;
-    padding: 10px;
+    background-color: #0073b1;
+    color: #fff;
+    border-radius: 28px;
     width: 100%;
-    
+    font-size: 1.1rem;
+    font-weight: 500;
+    font-family: inherit;
+    padding: 5px;
+    position: relative;
+    transition-duration: 500ms;
+    transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
+}
+
+.form-submit-btn:hover {
+    background-color: #fff;
+    color: #0073b1;
 }
 
 .sign-up-container {
@@ -48,3 +65,77 @@
     justify-content: space-around;
     font-size: small;
 }
+.userName-forgot-link {
+    font-size: 0.8rem;
+    font-weight: 700;
+}
+
+.userName-forgot-link:hover {
+    background: #d0e8ff;
+}
+
+.userName-forgot-link:link { text-decoration: none; }
+.userName-forgot-link:visited { text-decoration: none; color: #0073b1; }
+.userName-forgot-link:hover { text-decoration: none; }
+.userName-forgot-link:active { text-decoration: none; }
+
+.password-forgot-link {
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: #0073b1;
+    text-decoration: none;
+}
+
+.password-forgot-link:hover {
+    background: #d0e8ff;
+}
+
+.signUp-link {
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: #0073b1;
+    text-decoration: none;
+}
+
+.signUp-link:hover {
+    background: #d0e8ff;
+}
+
+.input-user-name {
+    height: 25px;
+    border: 0px solid #d0e8ff;
+    border-radius: 1px;
+    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.1);
+    -webkit-box-shadow: 0 4px 12px rgb(0 0 0 / 15%);
+}
+
+.input-password {
+    height: 25px;
+    border: 0;
+    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.1);
+    -webkit-box-shadow: 0 4px 12px rgb(0 0 0 / 15%);
+}
+
+.input-user-name, .input-password, textarea {
+    transition: box-shadow 1s;
+    transition-property:all;
+    transition-duration: 500ms;
+    transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
+    -webkit-transition: all 0.30s ease-in-out;
+    -moz-transition: all 0.30s ease-in-out;
+    -ms-transition: all 0.30s ease-in-out;
+    -o-transition: all 0.30s ease-in-out;
+    outline: none;
+    padding: 3px 0px 3px 3px;
+    margin: 5px 1px 3px 0px;
+    border: 1px solid #DDDDDD;
+  }
+   
+  .input-user-name:focus, .input-password:focus,  textarea:focus {
+    transition-duration: 500ms;
+    transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
+    box-shadow: 0 0 5px #0073b1;
+    padding: 3px 0px 3px 3px;
+    margin: 5px 1px 3px 0px;
+    border: 1px solid #0073b1;
+  }

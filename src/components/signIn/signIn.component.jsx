@@ -9,7 +9,7 @@ export default function SignIn() {
             <form action="/login" method="POST">
                 <div className="signIn-form-container">
                     <div className="userName-form-container">
-                        <input type="text" name="userName" placeholder='User name'
+                        <input className="input-user-name" type="text" name="userName" placeholder='User name'
                             //should start with an alphabet so. All other characters can be alphabets, numbers or an underscore so.
                             required
                             pattern="^[A-Za-z][A-Za-z0-9_]{7,29}$"
@@ -18,7 +18,7 @@ export default function SignIn() {
                         ></input>
                     </div>
                     <div className="password-form-container">
-                        <input type="password" name="passWord" required
+                        <input className="input-password" type="password" name="passWord" required
                             //Minimum eight characters, at least one uppercase letter, one lowercase letter and one number:
                             pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{8,}$"
                             autoComplete="on"
@@ -27,16 +27,16 @@ export default function SignIn() {
                             placeholder='Password'
                         ></input>
                     </div>
-                    <div class="forgot-remember-container">
-                        <Link to="/userNameRecovery">Forgot user name?</Link>
-                        <Link to="/passwordRecovery">Forgot password?</Link>
+                    <div className="forgot-remember-container">
+                        <Link className="userName-forgot-link" to="/userNameRecovery">Forgot user name?</Link>
+                        <Link className="password-forgot-link" to="/passwordRecovery">Forgot password?</Link>
                     </div>
                     <div className="form-submit-btn-container">
                         <button className="form-submit-btn" type="submit" value="Submit">Sign in</button>
                     </div>
-                    <div class="sign-up-container">
+                    <div className="sign-up-container">
                         <a>Don't have an account?</a>
-                        <Link to="/register">Sign up</Link>
+                        <Link className="signUp-link" to="/register">Sign up</Link>
                     </div>
                     <hr></hr>
                 </div>

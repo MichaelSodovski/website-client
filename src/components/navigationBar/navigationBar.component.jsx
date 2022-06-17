@@ -10,15 +10,15 @@ export default function NavigationBar() {
             <div className="navBar-main-container">
                 <div className="navigationBar-right-form-container">
                     <Link to="/home">
-                        <button >Home</button>
+                        <button className="btn" >Home</button>
                     </Link>
                 </div>
                 <div className="navigationBar-left-form-container">
                     <Link to="/register">
-                        <button>Register</button>
+                        <button className="btn">Register</button>
                     </Link>
                     <Link to="/signin">
-                        <button>Sign in</button>
+                        <button className="btn">Sign in</button>
                     </Link>
                 </div>
             </div>
