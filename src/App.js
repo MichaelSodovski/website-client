@@ -14,6 +14,7 @@ import UpdatePassword from '../src/components/password-recovery/passwordUpdate/p
 import UsernameRecovery from '../src/components/username-recovery/username-recovery.component'
 import EmailSent from '../src/components/notificationPages/emailSent/emailSent';
 import EmailVerificationSent from '../src/components/notificationPages/EmailVerificationSent/EmailVerificationSent'
+import PasswordSucceessUpdated from '../src/components/notificationPages/PasswordSucceessUpdated/PasswordSucceessUpdated';
 
 export default function App() {
     return (
@@ -55,12 +56,19 @@ export default function App() {
                             <Route path="/userNameRecovery">
                                 <UsernameRecovery></UsernameRecovery>
                             </Route>
+                            
                             <Route path="/emailSent">
                                 <EmailSent></EmailSent>
                             </Route>
                             <Route path="/emailVerificationSent">
                                 <EmailVerificationSent></EmailVerificationSent>
                             </Route>
+                            <Route path="/passwordRecoveryEmailVerificationSent">
+                                <EmailVerificationSent></EmailVerificationSent>
+                            </Route>  
+                            <Route path="/PasswordSucceessUpdated">
+                                <PasswordSucceessUpdated></PasswordSucceessUpdated>
+                            </Route>  
                         </Switch>
                     </main>
                     <aside className="App-left-side_menu">
