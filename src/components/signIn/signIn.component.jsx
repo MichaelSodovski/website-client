@@ -1,9 +1,13 @@
 import React from 'react';
 import '../signIn/signIn.component.css'
 import { Link } from "react-router-dom";
+import { submitFormSignIn } from '../../services/signIn.service'
 
 export default function SignIn() {
 
+
+
+    
     return (
         <React.Fragment>
             <form action="/login" method="POST">
@@ -33,7 +37,7 @@ export default function SignIn() {
                         <Link className="password-forgot-link" to="/passwordRecovery">Forgot password?</Link>
                     </div>
                     <div className="form-submit-btn-container">
-                        <button className="form-submit-btn" type="submit" value="Submit">Sign in</button>
+                        <button className="form-submit-btn" type="submit" value="Submit" onClick={() => submitFormSignIn()}>Sign in</button>
                     </div>
                     <div className="sign-up-container">
                         <a>Don't have an account?</a>
