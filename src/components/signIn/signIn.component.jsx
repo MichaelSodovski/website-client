@@ -1,21 +1,21 @@
 import React from 'react';
 import '../signIn/signIn.component.css'
 import { Link } from "react-router-dom";
-import axios from 'axios';
 
 export default function SignIn() {
-    let formData = new FormData();
+    let formData = {};
 
     const submitFormSignIn = (formData) => {
         const testURL = "http://localhost:3100/login";
         const myInit = {
             method: "POST",
             mode: 'no-cors',
-            body: formData
+            body: JSON.stringify(formData),
+            headers: {
+                'Content-Type': 'application/json'
+            },
         };
-
         const myRequest = new Request(testURL, myInit);
-
         fetch(myRequest).then(function (response) {
             return response;
         }).then(function (response) {
@@ -26,11 +26,11 @@ export default function SignIn() {
     }
 
     const userNameHandler = (e) => {
-        formData.append('userName', "michael");
+        formData.userName = e.target.value;
     };
 
     const passWordHandler = (e) => {
-        formData.append('passWord', "asdsad1234Asd");
+        formData.passWord = e.target.value;
     };
 
     return (
