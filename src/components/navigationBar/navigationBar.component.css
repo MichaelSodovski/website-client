@@ -3,7 +3,10 @@
     justify-content:space-between;
     width: 100%;
     height: 100%;
-    background-color: hsl(212, 88%, 84%);
+    background-color: hsl(211, 45%, 79%);
+    border: 0;
+    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.1);
+    -webkit-box-shadow: 0 4px 12px rgb(0 0 0 / 15%);
 }
 
 .navigationBar-left-container {
