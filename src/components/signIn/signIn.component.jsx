@@ -2,13 +2,15 @@ import React from 'react';
 import '../signIn/signIn.component.css'
 import { Link } from "react-router-dom";
 import { useState } from "react";
-import { Route } from "react-router-dom";
+import { useHistory } from "react-router-dom";
 
 export default function SignIn() {
     const [UserName, setUsername] = useState(null);
     const [PassWord, setPassWord] = useState(null);
     const [validation, setValidation] = useState(true);
     const [validationMessages, setValidationMessages] = useState("");
+    let history = useHistory();
+
 
     const submitFormSignIn = () => {
         fetch("http://localhost:3100/login", {
@@ -20,8 +22,13 @@ export default function SignIn() {
                 'Content-Type': 'application/json',
             }
         }).then(response => response.json()).then(function (response) {
+            if (response.message === 'User not found. please check youre credentials..') {
                 setValidation(true);
                 setValidationMessages(response.message);
+            }
+            else {
+                history.push("/home");
+            }
         }).catch(function (e) {
             console.log(e);
         });
