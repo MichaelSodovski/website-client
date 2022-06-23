@@ -138,3 +138,11 @@
   .welcome-header {
     text-shadow: 1px 1px #353535;
   }
+
+.validationP {
+    color: rgb(218, 0, 0);
+    font-size: 0.8rem;
+    font-weight: 700;
+    margin-left: 16px;
+    margin-top: 3px;
+}

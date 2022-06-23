@@ -1,41 +1,35 @@
 import React from 'react';
 import '../signIn/signIn.component.css'
 import { Link } from "react-router-dom";
+import { useState } from "react";
+import { Route } from "react-router-dom";
 
 export default function SignIn() {
-    let formData = {};
+    const [UserName, setUsername] = useState(null);
+    const [PassWord, setPassWord] = useState(null);
+    const [validation, setValidation] = useState(true);
+    const [validationMessages, setValidationMessages] = useState("");
 
-    const submitFormSignIn = (formData) => {
-        const testURL = "http://localhost:3100/login";
-        const myInit = {
+    const submitFormSignIn = () => {
+        fetch("http://localhost:3100/login", {
             method: "POST",
-            mode: 'no-cors',
-            body: JSON.stringify(formData),
+            mode: 'cors', // no-cors closes the body of the request and if u open cors then you need to allow the host at the server side. 
+            body: JSON.stringify({ UserName, PassWord }),
             headers: {
-                'Content-Type': 'application/json'
-            },
-        };
-        const myRequest = new Request(testURL, myInit);
-        fetch(myRequest).then(function (response) {
-            return response;
-        }).then(function (response) {
-            console.log(response);
+                'Accept': 'application/json',
+                'Content-Type': 'application/json',
+            }
+        }).then(response => response.json()).then(function (response) {
+                setValidation(true);
+                setValidationMessages(response.message);
         }).catch(function (e) {
             console.log(e);
         });
     }
 
-    const userNameHandler = (e) => {
-        formData.userName = e.target.value;
-    };
-
-    const passWordHandler = (e) => {
-        formData.passWord = e.target.value;
-    };
-
     return (
         <React.Fragment>
-            <form onSubmit={(e) => { submitFormSignIn(formData); e.preventDefault(); }}>
+            <form onSubmit={(e) => { submitFormSignIn(); e.preventDefault(); }}>
                 <div className="signIn-form-container">
                     <h1 className="welcome-header">Welcome</h1>
                     <div className="userName-form-container">
@@ -45,7 +39,7 @@ export default function SignIn() {
                             pattern="^[A-Za-z][A-Za-z0-9_]{7,29}$"
                             minLength={"6"}
                             maxLength={"20"}
-                            onChange={(e) => userNameHandler(e)}
+                            onChange={(e) => setUsername(e.target.value)}
                         ></input>
                     </div>
                     <div className="password-form-container">
@@ -56,9 +50,12 @@ export default function SignIn() {
                             minLength={"9"}
                             maxLength={"20"}
                             placeholder='Password'
-                            onChange={(e) => passWordHandler(e)}
+                            onChange={(e) => setPassWord(e.target.value)}
                         ></input>
                     </div>
+                    {validation &&
+                        <p className={"validationP"}> {validationMessages} </p>
+                    }
                     <div className="forgot-remember-container">
                         <Link className="userName-forgot-link" to="/userNameRecovery">Forgot user name?</Link>
                         <Link className="password-forgot-link" to="/passwordRecovery">Forgot password?</Link>
