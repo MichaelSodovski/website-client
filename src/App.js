@@ -1,6 +1,7 @@
 import './App.css';
-import React from "react";
+import React, { useEffect } from "react";
 import { Route, Switch } from 'react-router-dom';
+import { useState } from "react";
 import Home from '../src/components/home/home.component'
 // import Menu from '../src/components/menu/menu.component';
 import Register from '../src/components/register/register.component';
@@ -17,11 +18,14 @@ import EmailVerificationSent from '../src/components/notificationPages/EmailVeri
 import PasswordSucceessUpdated from '../src/components/notificationPages/PasswordSucceessUpdated/PasswordSucceessUpdated';
 
 export default function App() {
+
+    let jwt = localStorage.getItem('Authorization');
+
     return (
         <React.Fragment>
             <div className="App">
                 <header className="App-header">
-                    <NavigationBar></NavigationBar>
+                    <NavigationBar jwt={jwt}></NavigationBar>
                 </header>
                 <div className="layout-flexbox-container">
                     <aside className="App-right-side_menu">
@@ -38,15 +42,15 @@ export default function App() {
                             <Route path="/signin">
                                 <SignIn></SignIn>
                             </Route>
-                            <Route path="/users">
-                                <Users></Users>
-                            </Route>
+
+                            <Route exact path="/users" component={() => <Users jwt={jwt} />}></Route>
+
                             <Route path="/passwordRecovery">
                                 <PasswordRecovery></PasswordRecovery>
                             </Route>
-                            <Route path="/admin">
-                                <Admin></Admin>
-                            </Route>
+
+                            <Route exact path="/admin" component={() => <Admin jwt={jwt} />}></Route>
+
                             <Route path="/emailVerification">
                                 <EmailVerification></EmailVerification>
                             </Route>

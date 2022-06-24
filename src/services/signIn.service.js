@@ -1,4 +1,7 @@
-import axios from 'axios';
+// import axios from 'axios';
+
+
+
 
 // export async function submitFormSignIn() {
 //     debugger;
@@ -18,38 +21,38 @@ import axios from 'axios';
 //     });
 // }
 
-export async function sendRequestHandler(userName, passWord) {
-    var bodyFormData = new FormData();
-    bodyFormData.append('userName', userName);
-    bodyFormData.append('passWord', passWord);
-    await fetch('http://localhost:3100/login', {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json',
-            "Access-Control-Allow-Origin": "http://localhost:3100"
-        },
-        body: JSON.stringify(bodyFormData),
-    })
-        .then(response => response.json())
-        .then(data => {
-            console.log('Success:', data);
-        })
-        .catch((error) => {
-            console.error('Error:', error);
-        });
-}
+// export async function sendRequestHandler(userName, passWord) {
+//     var bodyFormData = new FormData();
+//     bodyFormData.append('userName', userName);
+//     bodyFormData.append('passWord', passWord);
+//     await fetch('http://localhost:3100/login', {
+//         method: 'POST',
+//         headers: {
+//             'Content-Type': 'application/json',
+//             "Access-Control-Allow-Origin": "http://localhost:3100"
+//         },
+//         body: JSON.stringify(bodyFormData),
+//     })
+//         .then(response => response.json())
+//         .then(data => {
+//             console.log('Success:', data);
+//         })
+//         .catch((error) => {
+//             console.error('Error:', error);
+//         });
+// }
 
-export async function storeExpense(expenseData) {
+// export async function storeExpense(expenseData) {
 
-    const response = await axios.post('/api/expenses/store/', expenseData).catch(function (error) {
-        if (error.response) {
-            return error.response.data;
+//     const response = await axios.post('/api/expenses/store/', expenseData).catch(function (error) {
+//         if (error.response) {
+//             return error.response.data;
 
-        } else if (error.request) {
-            console.log(error.request);
-        } else {
-            console.log('Error', error.message);
-        }
-    });
-    return response;
-}
+//         } else if (error.request) {
+//             console.log(error.request);
+//         } else {
+//             console.log('Error', error.message);
+//         }
+//     });
+//     return response;
+// }

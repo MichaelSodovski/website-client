@@ -11,11 +11,11 @@ export default function SignIn() {
     const [validationMessages, setValidationMessages] = useState("");
     let history = useHistory();
 
-
     const submitFormSignIn = () => {
         fetch("http://localhost:3100/login", {
             method: "POST",
             mode: 'cors', // no-cors closes the body of the request and if u open cors then you need to allow the host at the server side. 
+            credentials: 'include', // have to use that if i want to set cookies (without it cookies won't set)
             body: JSON.stringify({ UserName, PassWord }),
             headers: {
                 'Accept': 'application/json',
@@ -27,7 +27,10 @@ export default function SignIn() {
                 setValidationMessages(response.message);
             }
             else {
+                window.localStorage.setItem('Authorization', response.tokens.jwtToken);
+                window.localStorage.setItem('Refresh', response.tokens.refreshToken);
                 history.push("/home");
+                window.location.reload(true);
             }
         }).catch(function (e) {
             console.log(e);
