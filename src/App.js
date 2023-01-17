@@ -1,7 +1,7 @@
 import './App.css';
-import React, { useEffect } from "react";
+import React from "react";
 import { Route, Switch } from 'react-router-dom';
-import { useState } from "react";
+// import { useState } from "react";
 import Home from '../src/components/home/home.component'
 // import Menu from '../src/components/menu/menu.component';
 import Register from '../src/components/register/register.component';
@@ -18,7 +18,6 @@ import EmailVerificationSent from '../src/components/notificationPages/EmailVeri
 import PasswordSucceessUpdated from '../src/components/notificationPages/PasswordSucceessUpdated/PasswordSucceessUpdated';
 
 export default function App() {
-
     let jwt = localStorage.getItem('Authorization');
 
     return (

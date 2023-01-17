@@ -1,14 +1,22 @@
 import React from 'react';
 import '../admin/admin.component.css'
 import { Link } from "react-router-dom";
+import { Redirect } from "react-router-dom";
 
-export default function Admin() {
+export default function Admin(props) {
+    if (!props.jwt) {
+        return <Redirect to="/signin" />
+    }
 
     return (
         <React.Fragment>
             <div className='admin-main-container'>
-                <p>Admin area</p>
-                <Link className='nav-btn' to="/users">Users</Link>
+                <div className='admin-nav-bar'>
+                <Link className='link-btn' to="/users">Users</Link>
+                <Link className='link-btn' to="/articles">Articles</Link>
+                <Link className='link-btn' to="/users">Users</Link>
+                <Link className='link-btn' to="/users">Users</Link>
+                </div>
             </div>
         </React.Fragment>
     )
