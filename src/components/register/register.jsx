@@ -1,6 +1,6 @@
 import React from 'react';
-import '../register/register.component.css'
-import Form from './registerForm/register-form.component';
+import '../register/register.css'
+import Form from './registerForm/register-form';
 
 export default function Register() {
 

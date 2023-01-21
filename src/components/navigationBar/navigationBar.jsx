@@ -1,5 +1,5 @@
 import React from 'react';
-import '../navigationBar/navigationBar.component.css'
+import '../navigationBar/navigationBar.css'
 import { Link } from 'react-router-dom';
 import { useHistory } from "react-router-dom";
 

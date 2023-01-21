@@ -1,5 +1,5 @@
 import React from 'react';
-import '../addUser/addUser.component.css';
+import '../addUser/addUser.css';
 
 export default function AddUser() {
 

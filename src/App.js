@@ -2,17 +2,17 @@ import './App.css';
 import React from "react";
 import { Route, Switch } from 'react-router-dom';
 // import { useState } from "react";
-import Home from '../src/components/home/home.component'
-// import Menu from '../src/components/menu/menu.component';
-import Register from '../src/components/register/register.component';
-import NavigationBar from '../src/components/navigationBar/navigationBar.component';
-import SignIn from '../src/components/signIn/signIn.component';
-import Users from '../src/components/users/users.component';
-import PasswordRecovery from '../src/components/password-recovery/passwordRecovery.component';
-import Admin from '../src/components/admin/admin.component'
-import EmailVerification from '../src/components/password-recovery/emailVerification/emailVerification.component'
-import UpdatePassword from '../src/components/password-recovery/passwordUpdate/passwordUpdate.component'
-import UsernameRecovery from '../src/components/username-recovery/username-recovery.component'
+import Home from '../src/components/home/home'
+// import Menu from '../src/components/menu/menu';
+import Register from '../src/components/register/register';
+import NavigationBar from '../src/components/navigationBar/navigationBar';
+import SignIn from '../src/components/signIn/signIn';
+import Users from '../src/components/users/users';
+import PasswordRecovery from '../src/components/password-recovery/passwordRecovery';
+import Admin from './components/admin/admin';
+import EmailVerification from '../src/components/password-recovery/emailVerification/emailVerification'
+import UpdatePassword from '../src/components/password-recovery/passwordUpdate/passwordUpdate'
+import UsernameRecovery from '../src/components/username-recovery/username-recovery'
 import EmailSent from '../src/components/notificationPages/emailSent/emailSent';
 import EmailVerificationSent from '../src/components/notificationPages/EmailVerificationSent/EmailVerificationSent'
 import PasswordSucceessUpdated from '../src/components/notificationPages/PasswordSucceessUpdated/PasswordSucceessUpdated';

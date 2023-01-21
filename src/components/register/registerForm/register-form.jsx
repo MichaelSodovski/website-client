@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
-import '../registerForm/register-form.component.css'
+import '../registerForm/register-form.css'
 import {
     PasswordValidationInstructions, FirstNameValidationInstructions,
     LastNameValidationInstructions, UserNameValidationInstructions,
     EmailValidationInstructions, DateValidationInstructions, FirstNameValid,
     LastNameValid, UserNameValid, EmailValid, PasswordValid, DateValid
-} from '../registerForm/register-form-utils'
+} from './register-form-utils'
 
 export default function Form() {
     const [isFirstNameValid, setisFirstNameValid] = useState();

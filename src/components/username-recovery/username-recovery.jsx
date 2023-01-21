@@ -1,5 +1,5 @@
 import React from 'react';
-import '../username-recovery/username-recovery.component.css'
+import '../username-recovery/username-recovery.css'
 
 export default function UsernameRecovery() {
     return (

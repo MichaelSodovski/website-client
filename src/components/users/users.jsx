@@ -1,6 +1,6 @@
 import React from 'react';
 import { useEffect, useState, useRef } from 'react';
-import '../users/users.component.css'
+import '../users/users.css'
 import { Redirect } from "react-router-dom";
 import { Link } from "react-router-dom";
 import {
@@ -72,7 +72,7 @@ export default function Users(props) {
 
     return (
         <React.Fragment>
-            <div className='users-nav-bar'>
+            {/* <div className='users-nav-bar'>
                 <Link className='link-btn' to="/admin">Admin area</Link>
                 <Link className='link-btn' to="/admin">Add user</Link>
                 <Link className='link-btn' to="/admin">Update user</Link>
@@ -128,9 +128,11 @@ export default function Users(props) {
                     })}
 
                 </tbody>
-            </table>
+            </table> */}
 
-            {/* <Table data={usersData}>
+            
+
+            <Table data={usersData}>
 
 
                 <Body>
@@ -152,7 +154,7 @@ export default function Users(props) {
                         </Row>
                     ))}
                 </Body>
-            </Table> */}
+            </Table>
         </React.Fragment>
 
     );

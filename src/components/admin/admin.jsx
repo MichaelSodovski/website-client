@@ -1,5 +1,5 @@
 import React from 'react';
-import '../admin/admin.component.css'
+import '../admin/admin.css'
 import { Link } from "react-router-dom";
 import { Redirect } from "react-router-dom";
 

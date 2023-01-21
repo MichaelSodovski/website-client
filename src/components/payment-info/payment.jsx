@@ -1,5 +1,5 @@
 import React from 'react';
-import '../payment-info/payment.component.css'
+import '../payment-info/payment.css'
 
 export default function Payment() {
 
