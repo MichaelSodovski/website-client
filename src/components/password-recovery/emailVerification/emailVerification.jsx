@@ -1,5 +1,5 @@
 import React from 'react';
-import '../emailVerification/emailVerification.component.css'
+import '../emailVerification/emailVerification.css'
 
 export default function EmailVerification() {
 

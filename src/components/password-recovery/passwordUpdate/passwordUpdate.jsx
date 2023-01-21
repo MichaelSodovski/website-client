@@ -1,5 +1,5 @@
 import React from 'react';
-import '../passwordUpdate/passwordUpdate.component.css'
+import '../passwordUpdate/passwordUpdate.css'
 import { useState, useEffect } from "react";
 import { PasswordValidationInstructions, PasswordValid } from '../../register/registerForm/register-form-utils';
 

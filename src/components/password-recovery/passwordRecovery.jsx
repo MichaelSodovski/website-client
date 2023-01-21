@@ -1,5 +1,5 @@
 import React from 'react';
-import '../password-recovery/passwordRecovery.component.css'
+import '../password-recovery/passwordRecovery.css'
 
 export default function PasswordRecovery() {
 

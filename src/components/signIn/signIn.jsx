@@ -1,5 +1,5 @@
 import React from 'react';
-import '../signIn/signIn.component.css'
+import '../signIn/signIn.css'
 import { Link } from "react-router-dom";
 import { useState } from "react";
 import { useHistory } from "react-router-dom";
