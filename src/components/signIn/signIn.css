@@ -61,10 +61,10 @@
 }
 
 .sign-up-container {
-    margin-top: 15px;
+    margin-left: 85px;
+    margin-top: 25px;
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
     font-size: small;
 }
 .userName-forgot-link {
@@ -93,6 +93,8 @@
 }
 
 .signUp-link {
+    margin-top: 13px;
+    margin-left: 5px;
     font-size: 0.8rem;
     font-weight: 700;
     color: #0073b1;

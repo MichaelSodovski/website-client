@@ -12,29 +12,29 @@ export default function SignIn() {
     let history = useHistory();
 
     const submitFormSignIn = () => {
-        fetch("http://localhost:3100/login", {
-            method: "POST",
-            mode: 'cors', // no-cors closes the body of the request and if u open cors then you need to allow the host at the server side. 
-            credentials: 'include', // have to use that if i want to set cookies (without it cookies won't set)
-            body: JSON.stringify({ UserName, PassWord }),
-            headers: {
-                'Accept': 'application/json',
-                'Content-Type': 'application/json',
-            }
-        }).then(response => response.json()).then(function (response) {
-            if (response.message === 'User not found. please check youre credentials..') {
-                setValidation(true);
-                setValidationMessages(response.message);
-            }
-            else {
-                window.localStorage.setItem('Authorization', response.tokens.jwtToken);
-                window.localStorage.setItem('Refresh', response.tokens.refreshToken);
-                history.push("/home");
-                window.location.reload(true);
-            }
-        }).catch(function (e) {
-            console.log(e);
-        });
+        fetch("/login", {
+                method: "POST",
+                mode: 'cors', // no-cors closes the body of the request and if u open cors then you need to allow the host at the server side. 
+                credentials: 'include', // have to use that if i want to set cookies (without it cookies won't set)
+                body: JSON.stringify({ UserName, PassWord }),
+                headers: {
+                    'Accept': 'application/json',
+                    'Content-Type': 'application/json',
+                }
+            }).then(response => response.json()).then(function (response) {
+                if (response.message === 'User not found. please check youre credentials..') {
+                    setValidation(true);
+                    setValidationMessages(response.message);
+                }
+                else {
+                    window.localStorage.setItem('Authorization', response.tokens.jwtToken);
+                    window.localStorage.setItem('Refresh', response.tokens.refreshToken);
+                    history.push("/home");
+                    window.location.reload(true);
+                }
+            }).catch(function (e) {
+                console.log(e);
+            });
     }
 
     return (
@@ -74,7 +74,7 @@ export default function SignIn() {
                         <button className="form-submit-btn">Sign in</button>
                     </div>
                     <div className="sign-up-container">
-                        <a href="/#">Don't have an account?</a>
+                        <p>Don't have an account?</p>
                         <Link className="signUp-link" to="/register">Sign up</Link>
                     </div>
                     <hr></hr>
